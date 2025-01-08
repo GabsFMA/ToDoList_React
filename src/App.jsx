@@ -40,6 +40,16 @@ function App(){
     settaskList(maintainedTasks);
   }
 
+  function onClickSubmitButton(title, description){
+    const newTask = {
+      id: taskList.length + 1, 
+      title, 
+      description,
+      isCompleted: false, 
+    };
+    settaskList([...taskList, newTask])
+  }
+
   return(
     <div className=" w-screen h-screen bg-slate-500 flex justify-center p-6">
       <div className="w-[500px] space-y-4">
@@ -47,7 +57,9 @@ function App(){
           Gerenciador de Tarefas - React
         </h1>
 
-        <AddTask/>
+        <AddTask
+          onClickSubmitButton={onClickSubmitButton}
+        />
         <TaskList 
           taskList={taskList} 
           onTaskClick={onTaskClick} 

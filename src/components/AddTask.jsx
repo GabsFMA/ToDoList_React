@@ -1,4 +1,4 @@
-function AddTask(){
+function AddTask(onClickSubmitButton){
     return(
         <div className="flex flex-col bg-slate-200 rounded-md shadow space-y-4 p-6">
             <input 
