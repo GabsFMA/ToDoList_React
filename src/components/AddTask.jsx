@@ -1,6 +1,10 @@
 function AddTask(){
     return(
-        <h1 className="text-red-500">Adicionar tarefas</h1>
+        <div className="flex flex-col bg-slate-200 rounded-md shadow space-y-4 p-6">
+            <input type="text" placeholder="Insira o título da tarefa"/>
+            <input type="text" placeholder="Insira a descrição da tarefa"/>
+
+        </div>
     )
 }
 

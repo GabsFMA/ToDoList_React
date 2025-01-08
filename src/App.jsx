@@ -46,6 +46,8 @@ function App(){
         <h1 className="text-3xl text-slate-100 font-bold text-center">
           Gerenciador de Tarefas - React
         </h1>
+
+        <AddTask/>
         <TaskList 
           taskList={taskList} 
           onTaskClick={onTaskClick} 
