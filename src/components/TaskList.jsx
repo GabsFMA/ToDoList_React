@@ -1,6 +1,8 @@
 import { ChevronRightIcon, TrashIcon } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 function TaskList({taskList, onTaskClick, onClickDeleteTask}){
+
     return (
         <ul className="space-y-4 p-6 bg-slate-200 rounded-md shadow">
             {taskList.map((taskList) => (
@@ -11,7 +13,9 @@ function TaskList({taskList, onTaskClick, onClickDeleteTask}){
                         ${taskList.isCompleted && "line-through"}`}>
                             {taskList.title}
                     </button>
-                    <button className="bg-slate-400 p-2 text-white rounded-md">
+                    <button
+                         
+                        className="bg-slate-400 p-2 text-white rounded-md">
                         <ChevronRightIcon/>
                     </button>
                     <button 
