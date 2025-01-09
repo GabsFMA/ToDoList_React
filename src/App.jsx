@@ -13,6 +13,26 @@ function App(){
     localStorage.setItem("tasklist", JSON.stringify(taskList));
     }, [taskList]);
 
+    /* 
+    
+    Se quiser, pode usar esta API para preencher a lista de tarefas
+
+    useEffect(() => {
+      const fetchTasks = async () => {
+
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/todos?_limit=10",
+        {
+          method:"GET",
+        });
+
+      const data = await response.json()
+      settaskList(data);
+      }
+      fetchTasks()
+    }, [])
+    */
+
   function onTaskClick(taskListId){
      const completedTasks = taskList.map(taskList =>{
 
