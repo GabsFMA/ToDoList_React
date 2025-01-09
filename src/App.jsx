@@ -1,6 +1,6 @@
 import TaskList from "./components/TaskList"
 import AddTask from "./components/AddTask"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 function App(){
 
@@ -19,6 +19,11 @@ function App(){
     }
 ])
   
+  useEffect(() => 
+    {
+    localStorage.setItem("tasklist", JSON.stringify(taskList));
+    }, [taskList]);
+
   function onTaskClick(taskListId){
      const completedTasks = taskList.map(taskList =>{
 
