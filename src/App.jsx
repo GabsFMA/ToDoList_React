@@ -66,7 +66,6 @@ function App(){
           onClickDeleteTask={onClickDeleteTask}
         />
       </div>
-
     </div>
 
   )
