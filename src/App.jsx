@@ -4,20 +4,9 @@ import { useState, useEffect } from "react"
 
 function App(){
 
-  const [taskList, settaskList] = useState([
-    {
-    id: 1, 
-    title: "Terminar ToDoList",
-    description: "Terminar de fazer esse curso logo e subir todo no github",
-    isCompleted: false
-    },
-    {
-    id: 2, 
-    title: "Terminar ToDoList2",
-    description: "Mais uma vez Terminar de fazer esse curso logo e subir todo no github",
-    isCompleted: false
-    }
-])
+  const [taskList, settaskList] = useState(
+    JSON.parse(localStorage.getItem("tasklist")) || []
+  );
   
   useEffect(() => 
     {
